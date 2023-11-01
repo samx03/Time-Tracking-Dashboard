@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(226, 43%, 10%);
+  height: 100vh;
+}
+
+.timeTracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
+  height: 50vh;
+}
+.timeTracker .child1 {
+  width: 20%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: hsl(235, 46%, 20%);
+}
+.timeTracker .child1 .container1 {
+  padding: 2rem 1rem 3rem 1rem;
+  height: 60%;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 20px;
+}
+.timeTracker .child1 .container1 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  margin-bottom: 2rem;
+}
+.timeTracker .child1 .container1 .text {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 300;
+}
+.timeTracker .child1 .container1 .name {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 300;
+}
+.timeTracker .child1 .categories {
+  list-style: none;
+  padding: 1rem;
+}
+.timeTracker .child1 .categories .selected {
+  color: #FFFFFF;
+}
+.timeTracker .child1 .categories li {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  color: hsl(235, 45%, 61%);
+}
+.timeTracker .child1 .categories li:hover {
+  color: #FFFFFF;
+}
+.timeTracker .child2 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  place-content: center;
+  gap: 3%;
+}
+.timeTracker .child2 .cards {
+  width: 100%;
+  height: 195px;
+  border-radius: 20px;
+  background-position: right -4px;
+  background-repeat: no-repeat;
+  background-size: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.timeTracker .child2 .cards .content {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 1.5rem;
+  height: 80%;
+  background-color: hsl(235, 46%, 20%);
+}
+.timeTracker .child2 .cards .content .content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  margin-bottom: 10%;
+}
+.timeTracker .child2 .cards .content .content-heading p {
+  color: #FFFFFF;
+}
+.timeTracker .child2 .cards .content h2 {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 5% 0;
+}
+.timeTracker .child2 .cards .content p {
+  color: hsl(236, 100%, 87%);
+  font-size: 12px;
+  font-weight: 300;
+}
+.timeTracker .child2 .cards .content:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+
+@media screen and (max-width: 786px) {
+  .timeTracker {
+    flex-direction: column;
+    height: 100%;
+    gap: 30px;
+  }
+  .timeTracker .child1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .timeTracker .child1 .container1 {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .timeTracker .child1 .container1 img {
+    margin-bottom: 0;
+  }
+  .timeTracker .child1 .categories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .timeTracker .child2 {
+    width: 100%;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    height: auto;
+  }
+  body .timeTracker .child1 {
+    height: 30vh;
+  }
+  body .timeTracker .child1 .container1 .name {
+    font-size: 20px;
+  }
+  body .timeTracker .child2 {
+    margin-top: 5rem;
+    grid-template-columns: 100%;
+  }
+  body .timeTracker .child2 .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
